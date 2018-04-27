@@ -2,9 +2,9 @@ import sys, os
 import spotipy
 import spotipy.util as util
 
-os.environ['SPOTIPY_CLIENT_ID'] = '0353d51069c646118e1f32aed091588e'
-os.environ['SPOTIPY_CLIENT_SECRET'] = 'def236e2891e4a3fb072e3782c17c1a1'
-os.environ['SPOTIPY_REDIRECT_URI'] = 'http://localhost:8888/callback'
+os.environ['SPOTIPY_CLIENT_ID'] = 'efcab495355a4679bb3b5739d607540b'
+os.environ['SPOTIPY_CLIENT_SECRET'] = '4c1ba851cfa94359ad393f4368670100'
+os.environ['SPOTIPY_REDIRECT_URI'] = 'http://localhost/callback/'
 scope = 'user-library-read playlist-modify-public playlist-modify-private playlist-read-private'
 
 def getUserTracks(token):
@@ -67,6 +67,7 @@ else:
     sys.exit()
 
 token1 = util.prompt_for_user_token(username1, scope)
+input('Log out of your account in your browser and press ENTER.')
 token2 = util.prompt_for_user_token(username2, scope)
 
 if token1 and token2:
